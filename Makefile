@@ -1,5 +1,5 @@
 IMAGE_NAME = pollenclub
-TAG = 0.1
+TAG = 0.2
 
 build:
 	docker build . -t ${IMAGE_NAME}:${TAG}
