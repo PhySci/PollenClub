@@ -10,5 +10,5 @@ six==1.16.0
 yargy==0.15.0
 configargparse==1.5.3
 requests==2.26.0
-vkbottle==4.3.12
+vkbottle==4.5.2
 tqdm==4.62.3
