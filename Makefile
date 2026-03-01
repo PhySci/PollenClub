@@ -7,12 +7,12 @@ build:
 
 run:
 	docker run --rm -it \
-			   -v "$(shell pwd)"/../data:/data  \
+			   -v "$(shell pwd)"/data:/data  \
 			   --env-file "$(shell pwd)"/env/.env  \
 			   ${IMAGE_NAME}:latest
 
 run_bash:
-	docker run --rm -it -v "$(shell pwd)"/../data:/data  ${IMAGE_NAME}:latest bash
+	docker run --rm -it -v "$(shell pwd)"/data:/data  ${IMAGE_NAME}:latest bash
 
 push:
 	docker tag ${IMAGE_NAME}:${TAG} physci/pollenclub:latest
