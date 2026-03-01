@@ -27,6 +27,7 @@ def is_relevant(s: str) -> bool:
                "как здоровье",
                "локаци",
                "геолокаци",
+               "как ваше самочувствие"
                ]
 
     for phrase in phrases:
