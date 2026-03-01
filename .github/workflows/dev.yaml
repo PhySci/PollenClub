@@ -1,0 +1,22 @@
+name: Build
+on:
+  push:
+
+jobs:
+  build_push:
+    runs-on: ubuntu-;atest
+    steps:
+      - name: checkout
+        uses: actions/checkout@4
+
+#      - name: Login to Docker Hub
+#        shell: bash
+#        run: docker login
+
+      - name: build image
+        run: docker build . -t pollen:latest
+
+      - name: push image
+        run: |
+          docker tag pollen_parser:latest physci/pollenclub:latest
+          docker push physci/pollenclub:latest
